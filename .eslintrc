@@ -1,0 +1,56 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended",
+    "prettier/react"
+  ],
+  "plugins": [
+    "prettier",
+  ],
+  "rules": {
+    "strict": [
+      "off"
+    ],
+    "max-len": [
+      "off"
+    ],
+    "consistent-return": "warn",
+    "arrow-body-style": "warn",
+    "arrow-parens": "off",
+    "no-unused-vars": "warn",
+    "no-use-before-define": "warn",
+    "no-underscore-dangle": [
+      "off"
+    ],
+    "class-methods-use-this": "warn",
+    "no-mixed-operators": "warn",
+    "react/no-deprecated": "off",
+    "react/display-name": "off",
+    "react/jsx-filename-extension": "off",
+    "react/no-multi-comp": "off",
+    "react/prop-types": [
+      "error",
+      {
+        "ignore": [
+          "tracking",
+          "client"
+        ]
+      }
+    ],
+    "react/jsx-uses-vars": 1,
+    "react/sort-comp": [
+      "error",
+      {
+        "order": [
+          "type-annotations",
+          "static-methods",
+          "lifecycle",
+          "everything-else",
+          "render"
+        ]
+      }
+    ],
+  }
+}
