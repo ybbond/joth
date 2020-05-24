@@ -27,23 +27,31 @@ const Layout = ({children}: Props) => {
   `);
 
   return (
-    <>
+    <div
+      style={{
+        height: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+      }}
+    >
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
-    </>
+      {/* <div */}
+      {/*   style={{ */}
+      {/*     display: 'flex', */}
+      {/*     flex: 1, */}
+      {/*     flexDirection: 'column', */}
+      {/*     margin: `0 auto`, */}
+      {/*     maxWidth: 960, */}
+      {/*     padding: `0 1.0875rem 1.45rem`, */}
+      {/*     alignItems: 'center', */}
+      {/*   }} */}
+      {/* > */}
+      <main style={{flex: 1, margin: '0 auto', maxWidth: 960}}>{children}</main>
+      <footer style={{alignSelf: 'center', marginBottom: '1rem'}}>
+        © {new Date().getFullYear()} - Seladine Greenleaf
+      </footer>
+      {/* </div> */}
+    </div>
   );
 };
 
