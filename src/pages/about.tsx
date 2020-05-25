@@ -5,14 +5,16 @@ import {PageProps, Link} from 'gatsby';
 import Layout from '../components/Layout';
 import SEO from '../components/Seo';
 
-const SecondPage = (props: PageProps) => (
+const About = (props: PageProps) => (
   <Layout>
-    <SEO title="Page two" />
+    <SEO title="About Seladine" />
     <h1>Seladine Greenleaf</h1>
-    <p>I want to be a witch.</p>
-    <p>Welcome to page 2 ({props.path})</p>
-    <Link to="/">Go back to the homepage</Link>
+    <p>
+      She lives in a place calm, soothing and rich of Wednesday&rsquo;s air.
+    </p>
+    {/* <p>Welcome to page 2 ({props.path})</p> */}
+    {/* <Link to="/">Go back to the homepage</Link> */}
   </Layout>
 );
 
-export default SecondPage;
+export default About;
