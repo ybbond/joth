@@ -13,7 +13,14 @@ import Img from 'gatsby-image';
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const Image = () => {
+type Props = {
+  src?: string;
+  wrapperStyle?: Object;
+  imageStyle?: Object;
+};
+
+const Image = (props: Props) => {
+  const {src = 'seladine.jpeg'} = props;
   const data = useStaticQuery(graphql`
     query {
       placeholderImage: file(relativePath: {eq: "seladine.jpeg"}) {
@@ -26,7 +33,13 @@ const Image = () => {
     }
   `);
 
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />;
+  return (
+    <Img
+      fluid={data.placeholderImage.childImageSharp.fluid}
+      title="The visual persona of Seladine."
+      alt="Journey On The Horizon logo"
+    />
+  );
 };
 
 export default Image;

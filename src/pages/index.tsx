@@ -10,7 +10,15 @@ const IndexPage = () => (
     <div style={{maxWidth: `500px`, marginBottom: `1.45rem`}}>
       <Image />
     </div>
-    <h1>Journey On The Horizon</h1>
+    <h1 style={{textAlign: 'center'}}>Journey On The Horizon</h1>
+    <iframe
+      className="anchor-embed"
+      src="https://anchor.fm/seladinegreenleaf/embed"
+      height={102}
+      width="100%"
+      frameBorder="0"
+      scrolling="no"
+    ></iframe>
   </Layout>
 );
 
