@@ -35,22 +35,8 @@ const Layout = ({children}: Props) => {
       }}
     >
       <Header siteTitle={data.site.siteMetadata.title} />
-      {/* <div */}
-      {/*   style={{ */}
-      {/*     display: 'flex', */}
-      {/*     flex: 1, */}
-      {/*     flexDirection: 'column', */}
-      {/*     margin: `0 auto`, */}
-      {/*     maxWidth: 960, */}
-      {/*     padding: `0 1.0875rem 1.45rem`, */}
-      {/*     alignItems: 'center', */}
-      {/*   }} */}
-      {/* > */}
-      <main style={{flex: 1, margin: '0 auto', maxWidth: 960}}>{children}</main>
-      <footer style={{alignSelf: 'center', marginBottom: '1rem'}}>
-        © {new Date().getFullYear()} - Seladine Greenleaf
-      </footer>
-      {/* </div> */}
+      <main>{children}</main>
+      <footer>© {new Date().getFullYear()} - Seladine Greenleaf</footer>
     </div>
   );
 };

@@ -1,5 +1,6 @@
 html {
-  font-family: 'Hoefler Text', georgia, serif;
+  font-family: 'Hoefler Text', -apple-system, georgia, serif, Oxygen,
+    Cantarell, Droid Sans, Helvetica Neue, sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   background-color: #f3e0d1;
@@ -25,6 +26,22 @@ nav,
 section,
 summary {
   display: block;
+}
+main {
+  flex: 1;
+  max-width: 960px;
+  margin: 0 auto;
+}
+footer {
+  font-size: 0.8rem;
+  align-self: center;
+  margin-bottom: 1rem;
+}
+a:hover {
+  background-color: #dccbbd;
+}
+.anchor-embed {
+  width: 100%;
 }
 audio,
 canvas,
@@ -65,7 +82,7 @@ dfn {
   font-style: italic;
 }
 h1 {
-  font-size: 2em;
+  font-size: 2rem;
   margin: 0.67em 0;
 }
 mark {
@@ -204,7 +221,6 @@ html {
 }
 body {
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: 'Hoefler Text', georgia, serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -234,8 +250,8 @@ h1, h2, h3, h4, h5, h6 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: 'Hoefler Text', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Hoefler Text', -apple-system, georgia, serif, Oxygen,
+    Cantarell, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: unset;
   text-rendering: optimizeLegibility;
   line-height: 1.1;
@@ -536,5 +552,21 @@ pre tt:after {
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
+  }
+}
+@media (max-width: 1000px) {
+  main {
+    padding: 0 1rem;
+  }
+  h1 {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 320px) {
+  main {
+    padding: 0 0.8rem;
+  }
+  h1 {
+    font-size: 1.5rem;
   }
 }

@@ -44,7 +44,14 @@ function SEO({description = '', lang = 'en', meta = [], title}: Props) {
         lang,
       }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      titleTemplate={`%s :: ${site.siteMetadata.title}`}
+      link={[
+        {
+          rel: 'preload',
+          href: '/fonts/fonts.css',
+          as: 'style',
+        },
+      ]}
       meta={[
         {
           name: `description`,
