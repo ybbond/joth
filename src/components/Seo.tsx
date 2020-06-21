@@ -49,7 +49,10 @@ function SEO({description = '', lang = 'en', meta = [], title}: Props) {
         {
           rel: 'preload',
           href: '/fonts/fonts.css',
-          as: 'style',
+        },
+        {
+          rel: 'preload',
+          href: '/seladine.jpg',
         },
       ]}
       meta={[
